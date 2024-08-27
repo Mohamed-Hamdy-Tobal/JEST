@@ -1,3 +1,9 @@
+@tailwind base; /* Preflight will be injected here */
+
+@tailwind components;
+
+@tailwind utilities;
+
 *,
 ::after,
 ::before {
@@ -6,12 +12,6 @@
     -moz-box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-:root {
-    --main-color: #1f2278;
-    --orange-color: #f17732;
-    --btn-color: #565acf;
 }
 
 html {
