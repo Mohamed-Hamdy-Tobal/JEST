@@ -13,4 +13,21 @@ test('renders learn react link', () => {
   // 3 - expect and text methods are from json file, i name the file App.test.js
   // here i tell it to check if it exist toBeInTheDocument
   expect(btnById).toBeInTheDocument();
+
+
+  // ### Example ###
+
+  // expect that the element not exist
+  // expect(btnById).not.toBeInTheDocument(); // if the element exist will cause an error
+
+  // expect that the text exist in the element
+  expect(btnById).toHaveTextContent("Edit") // error if text not exist
+
+  // Expect By Attribute
+  expect(screen.getByTestId("google-link")).toHaveAttribute("href")
+  expect(screen.getByTestId("google-link")).toHaveAttribute("href", 'https://reactjs.org') // with value of attribute
+
+  // Check if disabled
+  expect(btnById).toBeDisabled() // here check if it is disabled and also true
+  expect(btnById).toHaveAttribute("disabled") // that only check if it has the disabled attribute, it can be true or false 
 });
